@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medas Tecnologia</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="flipdown.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="flipdown.js" defer></script>
+</head>
+<body>
+    <div class="timer">
+        <div id="imagem"><img src="Logo Preta.png" alt="Medas Tecnologia"></div>        
+            <h1>O site estará no ar em:</h1>
+        <div id="flipdown" class="flipdown"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            let timer_ = 1673262000 //https://www.epochconverter.com/
+            let flipdown = new FlipDown(timer_)
+            .start()
+            .ifEnded(()=>{
+                document.querySelector(".flipdown").innerHTML = `<h2>Timer end</h2>`
+            })
+
+        })
+    </script>
+    
+</body>
+</html>
